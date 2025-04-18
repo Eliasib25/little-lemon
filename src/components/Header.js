@@ -1,8 +1,10 @@
-function Header() {
+import React from 'react';
+import Nav from './Nav';
+
+const Header = () => {
     return (
         <header>
-        <h1>Little Lemon</h1>
-        <p>Welcome to our restaurant!</p>
+            <Nav />
         </header>
     );
 }

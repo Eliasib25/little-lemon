@@ -1,0 +1,64 @@
+/* src/components/About.css */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    color: #495e57;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.2rem;
+    color: #f4ce14;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .about-images {
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+  }
+  
+  .about-images img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-images img:hover {
+    transform: perspective(1000px) translateY(-10px) rotateX(5deg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-images {
+      justify-content: center;
+    }
+  }
+  
