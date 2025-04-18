@@ -2,7 +2,9 @@ import React, { useReducer } from "react";
 import Main from "../components/Main";
 import BookingForm from "../components/BookingForm";
 import Footer from "../components/Footer";
-import { fetchAPI } from "../API/api"; 
+import { fetchAPI, submitAPI } from "../API/api"; 
+import { useNavigate } from "react-router-dom";
+
 
 // Función que inicializa los horarios con la fecha actual
 const initializeTimes = () => {
@@ -23,11 +25,22 @@ const updateTimes = (state, action) => {
 
 const BookingPage = () => {
   // Estado con useReducer para manejar horarios disponibles
+  const navigate = useNavigate();
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+
+  const submitForm = (formData) => {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate("/ConfirmedBooking")
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   return (
     <Main>
-        <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+        <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
       <Footer />
     </Main>
   );

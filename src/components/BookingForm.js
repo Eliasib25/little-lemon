@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/bookingform.css';
-import { submitAPI } from '../API/api';
-import Modal from './Modal';
+// import Modal from './Modal';
 
-const BookingForm = ({ availableTimes, dispatch }) => {
-  const [date, setDate] = useState('');
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
+  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
   const cleanFlieds = () => {
     setDate('');
@@ -28,15 +27,22 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const formData= { date, time, guests, occasion };
+  //   const response = submitAPI(formData);
+  //   if (response === true) {
+  //       setShowModal(true);
+  //       cleanFlieds();
+  //   }
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData= { date, time, guests, occasion };
-    const response = submitAPI(formData);
-    if (response === true) {
-        setShowModal(true);
-        cleanFlieds();
-    }
-  };
+    const formData = {date, time, guests, occasion};
+    const response = submitForm(formData);
+    if (response) cleanFlieds();
+  }
 
   return (
     <di>
@@ -68,7 +74,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         type="number"
         id="guests"
         min="1"
-        max="10"
+        max="5"
         value={guests}
         onChange={(e) => {
             if (e.target.value < 1 || e.target.value > 5) {
@@ -95,13 +101,13 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
       <input type="submit" value="Make Your Reservation" />
 
-      {showModal && (
+      {/* {showModal && (
         <Modal 
             title="Reservation Confirmed"
             message= "Your reservation has been successfully submitted."
             onClose={() => setShowModal(false)}
         />
-    )}
+    )} */}
     </form>
     
     </di>
