@@ -45,7 +45,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   }
 
   return (
-    <di>
+    <div>
     <form className="booking-form" onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose date</label>
       <input
@@ -80,7 +80,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             if (e.target.value < 1 || e.target.value > 5) {
                 alert("Number of guests must be between 1 and 5.");
             } else {
-                setGuests(e.target.value);
+                setGuests(Number(e.target.value));
             }
         }}
         required
@@ -110,7 +110,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     )} */}
     </form>
     
-    </di>
+    </div>
   );
 };
 
