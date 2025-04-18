@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/footer.css';
 import logoFooter from '../assets/images/logoFooter.png';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -13,12 +14,12 @@ function Footer() {
           <div className="footer-section">
             <h4>Doormat Navigation</h4>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/menu">Menu</a></li>
-              <li><a href="/reservations">Reservations</a></li>
-              <li><a href="/order">Order Online</a></li>
-              <li><a href="/login">Login</a></li>
+              <li><Link to="/" >Home</Link></li>
+              <li><Link>About</Link></li>
+              <li><Link>Menu</Link></li>
+              <li><Link>Reservations</Link></li>
+              <li><Link>Order Online</Link></li>
+              <li><Link>Login</Link></li>
             </ul>
           </div>
   
@@ -34,9 +35,9 @@ function Footer() {
           <div className="footer-section">
             <h4>Social Media Links</h4>
             <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">X / Twitter</a></li>
+              <li><Link>Instagram</Link></li>
+              <li><Link>Facebook</Link></li>
+              <li><Link>X / Twitter</Link></li>
             </ul>
           </div>
         </div>

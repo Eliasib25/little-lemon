@@ -1,0 +1,41 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-color:  rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: 'fadeIn' 0.3s ease-in-out;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: translateY(0);
+    animation: 'fadeIn' 0.3s ease-in-out;
+}
+
+button {
+    background-color: #495E57;
+    color: white;
+    padding: 1rem;
+    border: none;
+    padding: 0.6 rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #333;
+}
+
