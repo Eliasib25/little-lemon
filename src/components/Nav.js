@@ -10,12 +10,12 @@ function Nav() {
                 <img src={Logo} alt="Little Lemon Logo" />
             </div>
             <ul className="nav-links">
-                <li><Link to="/" >Home</Link></li>
-                <li><Link>About</Link></li>
-                <li><Link>Menu</Link></li>
-                <li><Link to="/BookingPage" >Reservations</Link></li>
-                <li><Link>Order Online</Link></li>
-                <li><Link>Login</Link></li>
+                <li><Link aria-label="On click" to="/" >Home</Link></li>
+                <li><Link aria-label="On click">About</Link></li>
+                <li><Link aria-label="On click">Menu</Link></li>
+                <li><Link aria-label="On click" to="/BookingPage" >Reservations</Link></li>
+                <li><Link aria-label="On click">Order Online</Link></li>
+                <li><Link aria-label="On click">Login</Link></li>
             </ul>
         </nav>
     );

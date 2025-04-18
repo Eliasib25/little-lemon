@@ -14,12 +14,12 @@ function Footer() {
           <div className="footer-section">
             <h4>Doormat Navigation</h4>
             <ul>
-              <li><Link to="/" >Home</Link></li>
-              <li><Link>About</Link></li>
-              <li><Link>Menu</Link></li>
-              <li><Link to="/BookingPage" >Reservations</Link></li>
-              <li><Link>Order Online</Link></li>
-              <li><Link>Login</Link></li>
+              <li><Link aria-label="On click" to="/" >Home</Link></li>
+              <li><Link aria-label="On click">About</Link></li>
+              <li><Link aria-label="On click">Menu</Link></li>
+              <li><Link aria-label="On click" to="/BookingPage" >Reservations</Link></li>
+              <li><Link aria-label="On click">Order Online</Link></li>
+              <li><Link aria-label="On click">Login</Link></li>
             </ul>
           </div>
   
@@ -35,9 +35,9 @@ function Footer() {
           <div className="footer-section">
             <h4>Social Media Links</h4>
             <ul>
-              <li><Link>Instagram</Link></li>
-              <li><Link>Facebook</Link></li>
-              <li><Link>X / Twitter</Link></li>
+              <li><Link aria-label="On click">Instagram</Link></li>
+              <li><Link aria-label="On click">Facebook</Link></li>
+              <li><Link aria-label="On click">X / Twitter</Link></li>
             </ul>
           </div>
         </div>

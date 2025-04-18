@@ -47,7 +47,7 @@ const Specials = () => {
               </div>
               <p>{item.description}</p>
               <div className="order">
-                <button className="order-button">Order a delivery</button>
+                <button aria-label="On click" className="order-button">Order a delivery</button>
                 <img src={oderIcon} alt="Order icon" className="icon-order" />
               </div>
             </div>

@@ -10,7 +10,7 @@ const ConfirmedBooking = () => {
             <div className="confirmed">
                 <h1>Reservation Confirmed ✅</h1>
                 <p>Your table has been successfully reserved. We look forward to seeing you!</p>
-                <Link to="/BookingPage" className='confirmed-button' >Volver</Link> 
+                <Link aria-label="On click" to="/BookingPage" className='confirmed-button' >Volver</Link> 
             </div>
             <Footer />
         </Main>

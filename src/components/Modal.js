@@ -8,7 +8,7 @@ const Modal = (props) => {
             <div className='modal' >
                 <h2>{props.title}</h2>
                 <p>{props.message}</p>
-                <button className='button' onClick={props.onClose}>Close</button>
+                <button aria-label="On click" className='button' onClick={props.onClose}>Close</button>
             </div>
         </div>
     );

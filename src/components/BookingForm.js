@@ -99,7 +99,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         <option value="Anniversary">Anniversary</option>
       </select>
 
-      <input type="submit" value="Make Your Reservation" />
+      <input aria-label="On click" type="submit" value="Make Your Reservation" />
 
       {/* {showModal && (
         <Modal 
