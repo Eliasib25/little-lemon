@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/modal.css';
+import '../App.css';
 
 const Modal = (props) => {
     return (
@@ -7,7 +8,7 @@ const Modal = (props) => {
             <div className='modal' >
                 <h2>{props.title}</h2>
                 <p>{props.message}</p>
-                <button onClick={props.onClose}>Close</button>
+                <button className='button' onClick={props.onClose}>Close</button>
             </div>
         </div>
     );
